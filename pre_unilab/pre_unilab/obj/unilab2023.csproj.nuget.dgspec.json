@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj": {}
+    "C:\\ユニラボ\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj": {
+    "C:\\ユニラボ\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
+        "projectUniqueName": "C:\\ユニラボ\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
         "projectName": "unilab2023",
-        "projectPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
-        "packagesPath": "C:\\Users\\tomoy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\obj\\",
+        "projectPath": "C:\\ユニラボ\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
+        "packagesPath": "C:\\Users\\32433\\.nuget\\packages\\",
+        "outputPath": "C:\\ユニラボ\\unilab2023\\pre_unilab\\pre_unilab\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\32433\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
