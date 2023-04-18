@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\pre_unilab.csproj",
-      "projectName": "pre_unilab",
-      "projectPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\pre_unilab.csproj",
+      "projectUniqueName": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
+      "projectName": "unilab2023",
+      "projectPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
       "packagesPath": "C:\\Users\\tomoy\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\obj\\",
       "projectStyle": "PackageReference",
