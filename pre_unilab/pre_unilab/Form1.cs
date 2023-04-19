@@ -79,7 +79,7 @@ namespace pre_unilab
                 target.Items.Add(itemText);
             }
         }
-
+        //�͂炾
         private void button1_Click(object sender, EventArgs e)
         {
 
