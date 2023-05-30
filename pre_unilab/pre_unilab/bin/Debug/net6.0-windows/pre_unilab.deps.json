@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "pre_unilab/1.0.0": {
+        "runtime": {
+          "pre_unilab.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "pre_unilab/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

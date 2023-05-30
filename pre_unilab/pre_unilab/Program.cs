@@ -14,4 +14,34 @@ namespace pre_unilab
             Application.Run(new Form1());
         }
     }
+
+    public partial class Form1 : Form
+    {
+        #region フィールド変数
+
+        /// <summary>
+        /// スレッド分割用
+        /// </summary>
+        Thread drawThread;
+
+        #endregion
+
+        #region スレッド分割用関数
+
+       
+
+        private void InterThreadRefresh(Action _function)
+        {
+            try
+            {
+                if (InvokeRequired) Invoke(_function);
+                else _function();
+            }
+            catch (ObjectDisposedException)
+            {
+            }
+        }
+
+        #endregion
+    }
 }

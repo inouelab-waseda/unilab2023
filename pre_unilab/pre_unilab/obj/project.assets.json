@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
-      "projectName": "unilab2023",
-      "projectPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\unilab2023.csproj",
+      "projectUniqueName": "C:\\Users\\tomoy\\source\\repos\\unilab2023\\pre_unilab\\pre_unilab\\pre_unilab.csproj",
+      "projectName": "pre_unilab",
+      "projectPath": "C:\\Users\\tomoy\\source\\repos\\unilab2023\\pre_unilab\\pre_unilab\\pre_unilab.csproj",
       "packagesPath": "C:\\Users\\tomoy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomoy\\tomoyuki\\workspace\\unilab2023\\pre_unilab\\pre_unilab\\obj\\",
+      "outputPath": "C:\\Users\\tomoy\\source\\repos\\unilab2023\\pre_unilab\\pre_unilab\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
