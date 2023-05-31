@@ -16,6 +16,13 @@ namespace pre_unilab
     public partial class Form1 : Form
     {
         Bitmap bmp1,bmp2;
+
+        private string _stageName;
+        public string stageName
+        {
+            get { return _stageName; }
+            set { _stageName = value; }
+        }
         
 
         public Form1()
@@ -66,8 +73,8 @@ namespace pre_unilab
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Global.map = CreateStage("Map52203"); //ステージ作成
-
+            //Global.map = CreateStage("Map52203"); //ステージ作成
+            Global.map = CreateStage(stageName); //ステージ作成
 
 
             //ListBox1のイベントハンドラを追加
