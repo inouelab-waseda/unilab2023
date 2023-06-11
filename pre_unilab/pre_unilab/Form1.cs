@@ -59,7 +59,12 @@ namespace pre_unilab
             public static int x_now; //現在位置ｘ
             public static int y_now; //現在位置 y
 
-            public static int count=0; //試行回数カウント
+            public static int countA=0; //Aの試行回数カウント
+            public static int countB=0; //Bの試行回数カウント
+            public static int MaxA=10; //Aの試行回数制限
+            public static int MaxB=10; //Bの試行回数制限
+            public static int RemainA = MaxA - countA; //Aの残り試行回数
+            public static int RemainB = MaxB - countB; //Bの残り試行回数
             public static int miss_count = 0; //ミスカウント
 
             public static (List<int[]>, List<int[]>) move;
@@ -117,10 +122,20 @@ namespace pre_unilab
         private void button4_Click(object sender, EventArgs e)
         {
             label6.Visible = false;
-            SquareMovement(Global.x_now, Global.y_now, Global.map, Global.move.Item1); //キャラ動かす
-            label3.Text = Global.count.ToString(); //試行回数の表示
+            Global.countA += 1;
+            Global.RemainA -= 1; 
+            if(Global.countA > Global.MaxA)
+            {
+                label6.Visible = true;
+                Global.miss_count += 1;
+                label5.Text = Global.miss_count.ToString();
 
-            if(Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
+            }
+            SquareMovement(Global.x_now, Global.y_now, Global.map, Global.move.Item1); //キャラ動かす
+            label3.Text = Global.countA.ToString(); //試行回数の表示
+            label17.Text = Global.RemainA.ToString(); //残り試行回数の表示
+
+            if (Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
             {
                 label6.Text = "成功！！";
                 label6.Visible = true;
@@ -134,9 +149,18 @@ namespace pre_unilab
         private void button5_Click(object sender, EventArgs e)
         {
             label6.Visible = false;
+            Global.countB += 1;
+            Global.RemainB -= 1;
+            if (Global.countB > Global.MaxB)
+            {
+                label6.Visible = true;
+                Global.miss_count += 1;
+                label5.Text = Global.miss_count.ToString();
+            }
             var move = Global.move.Item2;
             SquareMovement(Global.x_now, Global.y_now, Global.map, move); //キャラ動かす
-            label3.Text = Global.count.ToString(); //試行回数の表示
+            label12.Text = Global.countB.ToString(); //試行回数の表示
+            label20.Text = Global.RemainB.ToString(); //残り試行回数の表示
 
             if (Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
             {
@@ -367,19 +391,19 @@ namespace pre_unilab
                                     break;
                                 }
 
-                                else if (get_move_a[k] == "up")
+                                else if (get_move_a[k] == "↑")
                                 {
                                     move_a.Add(new int[2] { 0, -1 });
                                 }
-                                else if (get_move_a[k] == "down")
+                                else if (get_move_a[k] == "↓")
                                 {
                                     move_a.Add(new int[2] { 0, 1 });
                                 }
-                                else if (get_move_a[k] == "right")
+                                else if (get_move_a[k] == "→")
                                 {
                                     move_a.Add(new int[2] { 1, 0 });
                                 }
-                                else if (get_move_a[k] == "left")
+                                else if (get_move_a[k] == "←")
                                 {
                                     move_a.Add(new int[2] { -1, 0 });
                                 }
@@ -391,19 +415,19 @@ namespace pre_unilab
                     }
                     else
                     {
-                        if (get_move_a[i] == "up")
+                        if (get_move_a[i] == "↑")
                         {
                             move_a.Add(new int[2] { 0, -1 });
                         }
-                        else if (get_move_a[i] == "down")
+                        else if (get_move_a[i] == "↓")
                         {
                             move_a.Add(new int[2] { 0, 1 });
                         }
-                        else if (get_move_a[i] == "right")
+                        else if (get_move_a[i] == "→")
                         {
                             move_a.Add(new int[2] { 1, 0 });
                         }
-                        else if (get_move_a[i] == "left")
+                        else if (get_move_a[i] == "←")
                         {
                             move_a.Add(new int[2] { -1, 0 });
                         }
@@ -436,19 +460,19 @@ namespace pre_unilab
                                     break;
                                 }
 
-                                else if (get_move_b[k] == "up")
+                                else if (get_move_b[k] == "↑")
                                 {
                                     move_b.Add(new int[2] { 0, -1 });
                                 }
-                                else if (get_move_b[k] == "down")
+                                else if (get_move_b[k] == "↓")
                                 {
                                     move_b.Add(new int[2] { 0, 1 });
                                 }
-                                else if (get_move_b[k] == "right")
+                                else if (get_move_b[k] == "→")
                                 {
                                     move_b.Add(new int[2] { 1, 0 });
                                 }
-                                else if (get_move_b[k] == "left")
+                                else if (get_move_b[k] == "←")
                                 {
                                     move_b.Add(new int[2] { -1, 0 });
                                 }
@@ -460,19 +484,19 @@ namespace pre_unilab
                     }
                     else
                     {
-                        if (get_move_b[i] == "up")
+                        if (get_move_b[i] == "↑")
                         {
                             move_b.Add(new int[2] { 0, -1 });
                         }
-                        else if (get_move_b[i] == "down")
+                        else if (get_move_b[i] == "↓")
                         {
                             move_b.Add(new int[2] { 0, 1 });
                         }
-                        else if (get_move_b[i] == "right")
+                        else if (get_move_b[i] == "→")
                         {
                             move_b.Add(new int[2] { 1, 0 });
                         }
-                        else if (get_move_b[i] == "left")
+                        else if (get_move_b[i] == "←")
                         {
                             move_b.Add(new int[2] { -1, 0 });
                         }
@@ -640,7 +664,6 @@ namespace pre_unilab
                 //500ミリ秒=0.5秒待機する
                 Thread.Sleep(waittime);
             }
-            Global.count += 1;
         }
 
 
@@ -694,6 +717,46 @@ namespace pre_unilab
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
         {
 
         }
