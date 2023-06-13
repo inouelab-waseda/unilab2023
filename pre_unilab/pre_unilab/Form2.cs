@@ -26,7 +26,7 @@ namespace pre_unilab
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string str = textBox1.Text;
+            string str = comboBox1.SelectedItem.ToString();
             f1.stageName = str;
             f1.Show();
             this.Close();
