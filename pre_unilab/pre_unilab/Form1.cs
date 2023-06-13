@@ -62,7 +62,7 @@ namespace pre_unilab
             public static int count=0; //試行回数カウント
             public static int miss_count = 0; //ミスカウント
 
-            public static (List<int[]>, List<int[]>) move;
+            public static List<int[]> move;
         }
         
         
@@ -89,6 +89,12 @@ namespace pre_unilab
             listBox3.DragEnter += new DragEventHandler(ListBox_DragEnter);
             listBox3.DragDrop += new DragEventHandler(ListBox_DragDrop);
 
+            //ListBox4のイベントハンドラを追加
+            listBox5.MouseDown += new MouseEventHandler(ListBox_MouseDown);
+            listBox4.SelectionMode = SelectionMode.One;
+            listBox4.DragEnter += new DragEventHandler(ListBox_DragEnter);
+            listBox4.DragDrop += new DragEventHandler(ListBox_DragDrop);
+
         }
 
 
@@ -96,15 +102,26 @@ namespace pre_unilab
         private void button1_Click(object sender, EventArgs e)
         {
             Global.move = Movement(); //ユーザーの入力を読み取る
-            button1.Visible = false;
-            button1.Enabled = false;
-            button4.Enabled = true;
-            button5.Enabled = true;
-            button4.Visible = true;
-            button5.Visible = true;
-            
+            label6.Visible = false;
+            SquareMovement(Global.x_now, Global.y_now, Global.map, Global.move); //キャラ動かす
+            label3.Text = Global.count.ToString(); //試行回数の表示
 
+            if (Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
+            {
+                label6.Text = "クリア！！";
+                label6.Visible = true;
+
+                //button1.Visible = false;
+                //button1.Enabled = false;
+                //button4.Enabled = true;
+                //button5.Enabled = true;
+                //button4.Visible = true;
+                //button5.Visible = true;
+
+
+            }
         }
+
         private void button2_Click(object sender, EventArgs e) //リストボックス内の動き削除
         {
             listBox1.Items.Clear();
@@ -113,41 +130,47 @@ namespace pre_unilab
         {
             listBox3.Items.Clear();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            label6.Visible = false;
-            SquareMovement(Global.x_now, Global.y_now, Global.map, Global.move.Item1); //キャラ動かす
-            label3.Text = Global.count.ToString(); //試行回数の表示
-
-            if(Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
-            {
-                label6.Text = "成功！！";
-                label6.Visible = true;
-                button4.Visible = false;
-                button4.Enabled = false;
-                button5.Visible = false;
-                button5.Enabled = false;
-            }
+            listBox4.Items.Clear();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            label6.Visible = false;
-            var move = Global.move.Item2;
-            SquareMovement(Global.x_now, Global.y_now, Global.map, move); //キャラ動かす
-            label3.Text = Global.count.ToString(); //試行回数の表示
 
-            if (Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
-            {
-                label6.Text = "クリア！！";
-                label6.Visible = true;
-                button4.Visible = false;
-                button4.Enabled = false;
-                button5.Visible = false;
-                button5.Enabled = false;
-            }
-        }
+        //A, Bボタン削除
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    label6.Visible = false;
+        //    SquareMovement(Global.x_now, Global.y_now, Global.map, Global.move.Item1); //キャラ動かす
+        //    label3.Text = Global.count.ToString(); //試行回数の表示
+
+        //    if(Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
+        //    {
+        //        label6.Text = "成功！！";
+        //        label6.Visible = true;
+        //        button4.Visible = false;
+        //        button4.Enabled = false;
+        //        button5.Visible = false;
+        //        button5.Enabled = false;
+        //    }
+        //}
+
+        //private void button5_Click(object sender, EventArgs e)
+        //{
+        //    label6.Visible = false;
+        //    var move = Global.move.Item2;
+        //    SquareMovement(Global.x_now, Global.y_now, Global.map, move); //キャラ動かす
+        //    label3.Text = Global.count.ToString(); //試行回数の表示
+
+        //    if (Global.x_goal == Global.x_now && Global.y_goal == Global.y_now)
+        //    {
+        //        label6.Text = "クリア！！";
+        //        label6.Visible = true;
+        //        button4.Visible = false;
+        //        button4.Enabled = false;
+        //        button5.Visible = false;
+        //        button5.Enabled = false;
+        //    }
+        //}
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Restart();
@@ -340,7 +363,7 @@ namespace pre_unilab
         }
 
         //ユーザーの入力を変換
-        public (List<int[]>,List<int[]>) Movement()
+        public List<int[]> Movement()
         {
             var move_a = new List<int[]>();
             var move_b = new List<int[]>();
@@ -480,8 +503,21 @@ namespace pre_unilab
                 }
 
             }
+            string[] get_move_main = this.listBox4.Items.Cast<string>().ToArray();
+            var move = new List<int[]>();
+            for(int i = 0; i < get_move_main.Length; i++)
+            {
+                if (get_move_main[i] == "A")
+                {
+                    move.AddRange(move_a);
+                }else if(get_move_main[i] == "B")
+                {
+                    move.AddRange(move_b);
+                }
+            }
+            
 
-            return (move_a, move_b);
+            return move;
         }
 
         //当たり判定
@@ -697,6 +733,8 @@ namespace pre_unilab
         {
 
         }
+
+        
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
