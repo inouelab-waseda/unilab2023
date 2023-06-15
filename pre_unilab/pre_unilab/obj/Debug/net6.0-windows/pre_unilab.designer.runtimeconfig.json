@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\maika\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\maika\\.nuget\\packages",
+      "C:\\Users\\zhuyu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\zhuyu\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
