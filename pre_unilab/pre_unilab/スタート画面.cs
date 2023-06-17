@@ -11,6 +11,7 @@ using static System.Windows.Forms.DataFormats;
 
 namespace pre_unilab
 {
+    //0618正直イエティ神
     public partial class スタート画面 : Form
     {
         public スタート画面()
