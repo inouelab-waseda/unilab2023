@@ -95,6 +95,19 @@ namespace pre_unilab
             listBox4.DragEnter += new DragEventHandler(ListBox_DragEnter);
             listBox4.DragDrop += new DragEventHandler(ListBox_DragDrop);
 
+            //ヒントを教えるキャラのアイコンを表示
+            Image img_tanuki = Image.FromFile("たぬき.png");
+
+            Bitmap bmp3 = new Bitmap(pictureBox3.Width, pictureBox3.Height);
+            Graphics g3 = Graphics.FromImage(bmp3);
+
+            g3.DrawImage(img_tanuki, 0, 0, bmp3.Height-1, bmp3.Height - 1);
+
+            g3.DrawRectangle(Pens.Black, 0, 0, bmp3.Height-1, bmp3.Height - 1);
+
+            pictureBox3.Image = bmp3;
+            g3.Dispose();
+
         }
 
 
@@ -734,7 +747,44 @@ namespace pre_unilab
 
         }
 
-        
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool visible = false;
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            //アイコンをクリックすることでヒントを表示（アイコン以外を押しても表示されない）
+            if (e.X < pictureBox3.Height)
+            {
+                Font fnt = new Font("MS UI Gothic", 15);
+                int sp = 8;
+
+                Bitmap bmp3 = new Bitmap(pictureBox3.Image);
+                Graphics g3 = Graphics.FromImage(bmp3);
+
+                if (!visible)
+                {
+                    if (_stageName == "stage1") g3.DrawString("ステージ1のヒントです", fnt, Brushes.Black, bmp3.Height + sp, 0 + sp);
+                    else if (_stageName == "stage2") g3.DrawString("ステージ2のヒントです", fnt, Brushes.Black, bmp3.Height + sp, 0 + sp);
+                }
+                else
+                {
+                    Image img_tanuki = Image.FromFile("たぬき.png");
+                    bmp3 = new Bitmap(pictureBox3.Width, pictureBox3.Height);
+                    g3 = Graphics.FromImage(bmp3);
+
+                    g3.DrawImage(img_tanuki, 0, 0, bmp3.Height - 1, bmp3.Height - 1);
+
+                    g3.DrawRectangle(Pens.Black, 0, 0, bmp3.Height - 1, bmp3.Height - 1);
+                }
+                visible = !visible; ;
+
+                pictureBox3.Image = bmp3;
+                g3.Dispose();
+            }
+        }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {

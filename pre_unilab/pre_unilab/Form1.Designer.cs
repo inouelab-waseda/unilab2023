@@ -50,19 +50,22 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.listBox5 = new System.Windows.Forms.ListBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.AllowDrop = true;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(54, 71);
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(47, 53);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(150, 244);
+            this.listBox1.Size = new System.Drawing.Size(132, 184);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
@@ -71,24 +74,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label1.Location = new System.Drawing.Point(77, 372);
+            this.label1.Location = new System.Drawing.Point(67, 279);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(446, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(390, 57);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(289, 279);
+            this.pictureBox1.Size = new System.Drawing.Size(253, 209);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(970, 287);
+            this.button1.Location = new System.Drawing.Point(849, 215);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 6;
             this.button1.Text = "start";
             this.button1.UseVisualStyleBackColor = true;
@@ -99,7 +104,7 @@
             this.listBox2.AllowDrop = true;
             this.listBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
+            this.listBox2.ItemHeight = 15;
             this.listBox2.Items.AddRange(new object[] {
             "up",
             "down",
@@ -107,25 +112,28 @@
             "left",
             "for (1)",
             "endfor"});
-            this.listBox2.Location = new System.Drawing.Point(139, 385);
+            this.listBox2.Location = new System.Drawing.Point(122, 289);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(150, 124);
+            this.listBox2.Size = new System.Drawing.Size(132, 94);
             this.listBox2.TabIndex = 7;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(446, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(390, 57);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(289, 279);
+            this.pictureBox2.Size = new System.Drawing.Size(253, 209);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(77, 325);
+            this.button2.Location = new System.Drawing.Point(67, 244);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.Size = new System.Drawing.Size(82, 22);
             this.button2.TabIndex = 9;
             this.button2.Text = "delete";
             this.button2.UseVisualStyleBackColor = true;
@@ -134,9 +142,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 39);
+            this.label2.Location = new System.Drawing.Point(22, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "試行回数：";
             // 
@@ -147,9 +155,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(894, 372);
+            this.groupBox1.Location = new System.Drawing.Point(782, 279);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 156);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(219, 117);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -157,27 +167,27 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(115, 96);
+            this.label5.Location = new System.Drawing.Point(101, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 20);
+            this.label5.Size = new System.Drawing.Size(13, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 96);
+            this.label4.Location = new System.Drawing.Point(30, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 12;
             this.label4.Text = "ミス回数：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 39);
+            this.label3.Location = new System.Drawing.Point(101, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 20);
+            this.label3.Size = new System.Drawing.Size(13, 15);
             this.label3.TabIndex = 11;
             this.label3.Text = "0";
             // 
@@ -185,19 +195,21 @@
             // 
             this.listBox3.AllowDrop = true;
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(219, 71);
+            this.listBox3.ItemHeight = 15;
+            this.listBox3.Location = new System.Drawing.Point(192, 53);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(146, 244);
+            this.listBox3.Size = new System.Drawing.Size(128, 184);
             this.listBox3.TabIndex = 12;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             this.listBox3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox3_MouseDoubleClick);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(242, 325);
+            this.button3.Location = new System.Drawing.Point(212, 244);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
+            this.button3.Size = new System.Drawing.Size(82, 22);
             this.button3.TabIndex = 13;
             this.button3.Text = "delete";
             this.button3.UseVisualStyleBackColor = true;
@@ -207,9 +219,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(910, 187);
+            this.label6.Location = new System.Drawing.Point(796, 140);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 41);
+            this.label6.Size = new System.Drawing.Size(71, 32);
             this.label6.TabIndex = 16;
             this.label6.Text = "ミス！";
             this.label6.Visible = false;
@@ -217,26 +229,27 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 48);
+            this.label7.Location = new System.Drawing.Point(103, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(19, 20);
+            this.label7.Size = new System.Drawing.Size(15, 15);
             this.label7.TabIndex = 17;
             this.label7.Text = "A";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(281, 45);
+            this.label8.Location = new System.Drawing.Point(246, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 20);
+            this.label8.Size = new System.Drawing.Size(14, 15);
             this.label8.TabIndex = 18;
             this.label8.Text = "B";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1050, 24);
+            this.button6.Location = new System.Drawing.Point(919, 18);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 29);
+            this.button6.Size = new System.Drawing.Size(82, 22);
             this.button6.TabIndex = 19;
             this.button6.Text = "リトライ";
             this.button6.UseVisualStyleBackColor = true;
@@ -246,17 +259,19 @@
             // 
             this.listBox4.AllowDrop = true;
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 20;
-            this.listBox4.Location = new System.Drawing.Point(396, 72);
+            this.listBox4.ItemHeight = 15;
+            this.listBox4.Location = new System.Drawing.Point(346, 54);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(150, 244);
+            this.listBox4.Size = new System.Drawing.Size(132, 184);
             this.listBox4.TabIndex = 20;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(418, 326);
+            this.button4.Location = new System.Drawing.Point(366, 244);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.Size = new System.Drawing.Size(82, 22);
             this.button4.TabIndex = 21;
             this.button4.Text = "delete";
             this.button4.UseVisualStyleBackColor = true;
@@ -265,29 +280,42 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(446, 45);
+            this.label9.Location = new System.Drawing.Point(390, 34);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 20);
+            this.label9.Size = new System.Drawing.Size(33, 15);
             this.label9.TabIndex = 22;
             this.label9.Text = "main";
             // 
             // listBox5
             // 
             this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 20;
+            this.listBox5.ItemHeight = 15;
             this.listBox5.Items.AddRange(new object[] {
             "A",
             "B"});
-            this.listBox5.Location = new System.Drawing.Point(396, 394);
+            this.listBox5.Location = new System.Drawing.Point(346, 296);
+            this.listBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(150, 104);
+            this.listBox5.Size = new System.Drawing.Size(132, 79);
             this.listBox5.TabIndex = 23;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox3.Location = new System.Drawing.Point(56, 431);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(587, 40);
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 561);
+            this.ClientSize = new System.Drawing.Size(1024, 483);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.listBox5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button4);
@@ -306,6 +334,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "ゲーム画面";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -313,6 +342,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +372,6 @@
         private Button button4;
         private Label label9;
         private ListBox listBox5;
+        private PictureBox pictureBox3;
     }
 }

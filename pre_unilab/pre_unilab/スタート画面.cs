@@ -27,7 +27,8 @@ namespace pre_unilab
 
         private void スタート画面_Load(object sender, EventArgs e)
         {
-            button1.Enabled = false;
+            //デバッグのたびに寒いパロディを見なきゃいけないのは面倒なので、一時的にfalse→trueに変更
+            button1.Enabled = true;
         }
 
         enum chara : int { shizu, ikaP };
