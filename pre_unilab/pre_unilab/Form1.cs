@@ -367,16 +367,38 @@ namespace pre_unilab
         {
             var move_a = new List<int[]>();
             var move_b = new List<int[]>();
+            string[] get_move_a = this.listBox1.Items.Cast<string>().ToArray();
+            string[] get_move_b = this.listBox3.Items.Cast<string>().ToArray();
+            var get_move_a_list = new List<string>();
+            var get_move_b_list = new List<string>();
 
-            if (this.listBox1.Items.Count != 0)
+            get_move_b_list.AddRange(get_move_b);
+
+
+            for (int i = 0; i < get_move_a.Length; i++)
             {
-                string[] get_move_a = this.listBox1.Items.Cast<string>().ToArray();
-                for (int i = 0; i < get_move_a.Length; i++)
+                if (get_move_a[i] == "B")
                 {
-                    if (get_move_a[i].StartsWith("for"))
+                    get_move_a_list.AddRange(get_move_b_list);
+
+                }
+                else
+                {
+                    get_move_a_list.Add(get_move_a[i]);
+                }
+            }
+
+            
+
+            if (get_move_a.Length != 0)
+            {
+                //string[] get_move_a = this.listBox1.Items.Cast<string>().ToArray();
+                for (int i = 0; i < get_move_a_list.Count; i++)
+                {
+                    if (get_move_a_list[i].StartsWith("for"))
                     {
                         int start = i + 1;
-                        int trial = int.Parse(Regex.Replace(get_move_a[i], @"[^0-9]", ""));
+                        int trial = int.Parse(Regex.Replace(get_move_a_list[i], @"[^0-9]", ""));
                         int goal = 0; //Œã‚ÅÝ’è
 
                         for(int j=0; j<trial; j++)
@@ -384,25 +406,25 @@ namespace pre_unilab
                             int k = start;
                             do
                             {
-                                if (get_move_a[k] == "endfor")
+                                if (get_move_a_list[k] == "endfor")
                                 {
                                     goal = k;
                                     break;
                                 }
 
-                                else if (get_move_a[k] == "up")
+                                else if (get_move_a_list[k] == "up")
                                 {
                                     move_a.Add(new int[2] { 0, -1 });
                                 }
-                                else if (get_move_a[k] == "down")
+                                else if (get_move_a_list[k] == "down")
                                 {
                                     move_a.Add(new int[2] { 0, 1 });
                                 }
-                                else if (get_move_a[k] == "right")
+                                else if (get_move_a_list[k] == "right")
                                 {
                                     move_a.Add(new int[2] { 1, 0 });
                                 }
-                                else if (get_move_a[k] == "left")
+                                else if (get_move_a_list[k] == "left")
                                 {
                                     move_a.Add(new int[2] { -1, 0 });
                                 }
@@ -414,19 +436,19 @@ namespace pre_unilab
                     }
                     else
                     {
-                        if (get_move_a[i] == "up")
+                        if (get_move_a_list[i] == "up")
                         {
                             move_a.Add(new int[2] { 0, -1 });
                         }
-                        else if (get_move_a[i] == "down")
+                        else if (get_move_a_list[i] == "down")
                         {
                             move_a.Add(new int[2] { 0, 1 });
                         }
-                        else if (get_move_a[i] == "right")
+                        else if (get_move_a_list[i] == "right")
                         {
                             move_a.Add(new int[2] { 1, 0 });
                         }
-                        else if (get_move_a[i] == "left")
+                        else if (get_move_a_list[i] == "left")
                         {
                             move_a.Add(new int[2] { -1, 0 });
                         }
@@ -434,17 +456,17 @@ namespace pre_unilab
                 }
             }
 
-            if(this.listBox2.Items.Count != 0)
+            if(get_move_b.Length != 0)
             {
-                string[] get_move_b = this.listBox3.Items.Cast<string>().ToArray();
+                //string[] get_move_b = this.listBox3.Items.Cast<string>().ToArray();
 
 
-                for (int i = 0; i < get_move_b.Length; i++)
+                for (int i = 0; i < get_move_b_list.Count; i++)
                 {
-                    if (get_move_b[i].StartsWith("for"))
+                    if (get_move_b_list[i].StartsWith("for"))
                     {
                         int start = i + 1;
-                        int trial = int.Parse(Regex.Replace(get_move_b[i], @"[^0-9]", ""));
+                        int trial = int.Parse(Regex.Replace(get_move_b_list[i], @"[^0-9]", ""));
 
                         int goal = 0; //Œã‚ÅÝ’è
 
@@ -453,25 +475,25 @@ namespace pre_unilab
                             int k = start;
                             do
                             {
-                                if (get_move_b[k] == "endfor")
+                                if (get_move_b_list[k] == "endfor")
                                 {
                                     goal = k;
                                     break;
                                 }
 
-                                else if (get_move_b[k] == "up")
+                                else if (get_move_b_list[k] == "up")
                                 {
                                     move_b.Add(new int[2] { 0, -1 });
                                 }
-                                else if (get_move_b[k] == "down")
+                                else if (get_move_b_list[k] == "down")
                                 {
                                     move_b.Add(new int[2] { 0, 1 });
                                 }
-                                else if (get_move_b[k] == "right")
+                                else if (get_move_b_list[k] == "right")
                                 {
                                     move_b.Add(new int[2] { 1, 0 });
                                 }
-                                else if (get_move_b[k] == "left")
+                                else if (get_move_b_list[k] == "left")
                                 {
                                     move_b.Add(new int[2] { -1, 0 });
                                 }
@@ -483,19 +505,19 @@ namespace pre_unilab
                     }
                     else
                     {
-                        if (get_move_b[i] == "up")
+                        if (get_move_b_list[i] == "up")
                         {
                             move_b.Add(new int[2] { 0, -1 });
                         }
-                        else if (get_move_b[i] == "down")
+                        else if (get_move_b_list[i] == "down")
                         {
                             move_b.Add(new int[2] { 0, 1 });
                         }
-                        else if (get_move_b[i] == "right")
+                        else if (get_move_b_list[i] == "right")
                         {
                             move_b.Add(new int[2] { 1, 0 });
                         }
-                        else if (get_move_b[i] == "left")
+                        else if (get_move_b_list[i] == "left")
                         {
                             move_b.Add(new int[2] { -1, 0 });
                         }
